@@ -31,6 +31,10 @@ npm i --save-dev bs-platform
 }
 ```
 
+### Use a Template
+
+We ran all the above steps, so if you want you can just copy the `reasonml-template` folder and use that as a starting point.
+
 ### TL;DR
 
 #### *What's the deal the the pretty error messages?* 
@@ -38,4 +42,3 @@ read [here](https://reasonml.github.io/blog/2017/08/25/way-nicer-error-messages.
 
 #### *What's the deal with the weird installation process?* 
 The official installation process recommends install `bs-platform` globally, and `bsb -init` creates a symlink to the global installation. In order to avoid weird setup conditions and version conflicts, this installation process makes sure to use the `bs-platform` which is locally installed in your project.
-
