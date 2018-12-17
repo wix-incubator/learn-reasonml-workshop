@@ -64,12 +64,12 @@ let successor = cardRank => failwith("For you to implement");
 let runTests = () => {
   Js.log(">>>>> running tests...");
 
-  Js.log("score")
+  Js.log("score");
   assert(11 == score(Ace));
   assert(10 == score(Jack));
   assert(5 == score(Number(5)));
 
-  Js.log("successor")
+  Js.log("successor");
   assert(Number(4) == successor(Number(3)));
   assert(Jack == successor(Number(10)));
   assert(Ace == successor(King));
