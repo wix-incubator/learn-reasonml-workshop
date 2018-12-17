@@ -4,6 +4,7 @@
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
+    "test": "./run_tests",
     "clean": "bsb -clean-world"
   },
   "keywords": [
