@@ -100,10 +100,8 @@ let () = {
    intAverage(10, 20) = 15
    floatAverage(10., 20.) = 15.
  */
-let intAverage = (x, y) => 42;/* For you to implement */
-
-/* let floatAverage : (float, float) => float */
-let floatAverage = (x, y) => 42./* For you to implement */
+let intAverage = (x, y) => assert(false);/* For you to implement */
+let floatAverage = (x, y) => assert(false);/* For you to implement */
 
 let runTests = () => {
     Js.log("=============== Running Tests ==================")

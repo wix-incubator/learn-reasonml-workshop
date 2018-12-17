@@ -22,19 +22,19 @@ print_endline("Hello, World!!");
     /Users/alexko/Projects/PersonalPlayGround/workshops/reasonml/learn-reasonml-workshop/workshop-atoms/src/01-hello_world/introduction.bs.js:14
         throw [
         ^
-    Assert_failure,-10,introduction.re,41,4
+    Assert_failure,-10,introduction.re,37,4
     ```
 
     The first row goes right into our compiled JS file `introduction.bs.js:14` this is unintersting for us since even though it looks readable
     we want to work with the code we written.
 
     But the second row is relevent for us:
-    "Assert_failure,-10,introduction.re,41,4" - Basically it translates to - We have a failed assertion in file `introduction.re` line 41 col 4
+    "Assert_failure,-10,introduction.re,37,4" - Basically it translates to - We have a failed assertion in file `introduction.re` line 37 col 4
 
     Now lets make the test pass!
 */
 
-let truthy = () => false; /* For you to implement */
+let truthy = () => assert(false);/* For you to implement */
 
 let runTests = () => {
     Js.log("=============== Running Tests ==================")
