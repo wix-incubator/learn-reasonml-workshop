@@ -9,47 +9,61 @@
 let divide = (dividend, divisor) => dividend / divisor;
 
 /*
-  We can fix this using labelled arguments.
+ We can fix this using labelled arguments.
 
-  To label an argument in a signature, and when defining a function, we
-  put a tilde (~) before the name of the argument.
+ To label an argument in a signature, and when defining a function, we
+ put a tilde (~) before the name of the argument.
 
-  The following function has the signature:
+ The following function has the signature:
 
-  let divide: (~dividend:int, ~divisor:int) => int
+ let divide: (~dividend:int, ~divisor:int) => int
  */
-let divide = (~dividend, ~divisor) => dividend / divisor;
+let divideLabelled = (~dividend, ~divisor) => dividend / divisor;
+
+/* We can then call it using: divide(~dividend=9, ~divisor=3) */
+assert(3 == divideLabelled(~dividend=12, ~divisor=4));
+
+/* Labelled arguments can be passed in in any order. */
+assert(3 == divideLabelled(~divisor=4, ~dividend=12));
+
+/* We can also pass variables into the labelled argument: */
+let top = 12;
+let bottom = 4;
+
+divideLabelled(~dividend=top, ~divisor=bottom);
 
 /*
-  We can then call it using: divide(~dividend=9, ~divisor=3)
-
-  Labelled arguments can be passed in in any order.
-
-  We can also pass variables into the labelled argument:
-
-  let dividend = 9;
-  let divisor  = 3;
-  divide(~dividend=dividend, ~divisor=divisor)
-
-  If the variable name happens to be the same as the labelled argument, we
-  don't even have to write it twice:
-
-  let dividend = 9;
-  let divisor  = 3;
-  divide(~dividend, ~divisor)
-
-  This short-hand syntax is called punning.
-
-  Now implement [modulo(~dividend, ~divisor)] using our version of divide with
-  labelled arguments (e.g. [modulo(~dividend:7, ~divisor:2)] should equal 1)
+ If the variable name happens to be the same as the labelled argument, we
+ don't even have to write it twice, this short-hand syntax is called punning.:
  */
-let modulo = (~dividend, ~divisor) => failwith("For you to implement");
+let dividend = 12;
+let divisor = 4;
+assert(3 == divideLabelled(~dividend, ~divisor));
 
-/* 
-  The following functions are examples of modules that use labels to 
-  help clarify what their arugments mean:
-*/ 
-/* StringLabels.sub */
-/* Js.Re.fromStringWithFlags */
-/* Js.Math.pow_int */
-/* StdLabels.Array.make_matrix */
+/*
+ The following functions are examples of modules that use labels to
+ help clarify what their arugments mean:
+ */
+StringLabels.sub;
+Js.Re.fromStringWithFlags;
+Js.Math.pow_int;
+StdLabels.Array.make_matrix;
+
+/*
+ Now implement [modulo(~dividend, ~divisor)] using our version of divide with
+ labelled arguments (e.g. [modulo(~dividend:7, ~divisor:2)] should equal 1)
+ */
+let modulo = (~dividend, ~divisor) => assert(false);
+
+/* MAKE TESTS PASS */
+let runTests = () => {
+  Js.log("=============== Running Tests for " ++ __MODULE__);
+
+  assert(1 == modulo(~dividend=7, ~divisor=2));
+  assert(0 == modulo(~dividend=12, ~divisor=4));
+  assert(8 == modulo(~dividend=24, ~divisor=16));
+
+  Js.log("=============== End Tests ====================");
+};
+
+runTests();
