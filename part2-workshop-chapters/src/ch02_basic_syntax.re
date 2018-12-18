@@ -1,7 +1,7 @@
 /*
   In Reason there are 6 basic types: int, float, char, string, bool, and unit.
 
-  Note the keyword [let], which is how variable assignment is done in Reason. 
+  Note the keyword [let], which is how variable assignment is done in Reason.
   (https://reasonml.github.io/docs/en/syntax-cheatsheet#let-binding)
 
   In Reason floats are distinguished from ints by their decimal points. 0 is an
@@ -23,32 +23,8 @@
 let four: int = 4;
 let floatFour: float = 4.;
 
-/*
-  Lets insert an incorrect signature for [floatFour] to see what error the
-  compiler gives you.
-
-  let floatFour: int = 4.;
-*/
-
-/*
-  Function signatures
-  ===================
-
-  In Reason, functions are also values! And so, functions also have type
-  signatures.
-
-  In a function signature, types of parameters are enclosed within paranthesis.
-  The return value is the described last and preceded immediately by an arrow
-  [=>].
-
-  So the signature for a function that takes two integers and returns an
-  integer is:
-
-  let intAverage: (int, int) => int
-
-  #NOTE: In Reason there's no explicit return statement: functions just return the
-  value of the last statement in that function.
- */
+/* Uncomment the following line to see an incorrect signature */
+/* let seven: float = 7; */
 
 /*
   String (https://reasonml.github.io/docs/en/string-and-char):
@@ -73,8 +49,31 @@ let fullName = firstName ++ " " ++ lastName;
   !  for logical not
  */
 
-let aBooleanFalse: bool = false;
-let () = assert (true || aBooleanFalse);
+let aBooleanFalse = false;
+assert(aBooleanFalse && true);
+
+/*
+  Function signatures
+  ===================
+
+  In Reason, functions are also values! And so, functions also have type
+  signatures.
+
+  In a function signature, types of parameters are enclosed within paranthesis.
+  The return value is the described last and preceded immediately by an arrow
+  [=>].
+
+  So the signature for a function that takes two integers and returns an
+  integer is:
+
+  let intAverage: (int, int) => int
+
+  #NOTE: In Reason there's no explicit return statement: functions just return the
+  value of the last statement in that function.
+ */
+
+/* TODO example for function signatures */
+/* let mult (x, y) = x * y */
 
 /*
   The [unit] type
@@ -89,25 +88,22 @@ let () = assert (true || aBooleanFalse);
   To combine several unit operations together the ; operator is used contained
   within curly braces.
  */
-let () = {
-  print_endline("Hi, My name is ");
-  print_endline(fullName);
-  print_endline(" and I am 5 years old");
-};
 
- /*
-   Lets implement following functions:
-   intAverage(10, 20) = 15
-   floatAverage(10., 20.) = 15.
- */
-let intAverage = (x, y) => assert(false);/* For you to implement */
-let floatAverage = (x, y) => assert(false);/* For you to implement */
+Js.log("Hi, My name is ");
+Js.log(fullName);
+Js.log(" and I am 5 years old");
+
+/* IMPLEMENT ME */
+let intAverage = (x, y) => assert(false);
+
+/* IMPLEMENT ME */
+let floatAverage = (x, y) => assert(false);
 
 let runTests = () => {
-    Js.log("=============== Running Tests ==================")
-    assert (floatAverage(5., 5.) == 5.); 
-    assert (floatAverage(5., 10.) == 7.5); 
-    Js.log("===============   End Tests   ==================")
-}
+  Js.log("=============== Running Tests ==================");
+  assert(floatAverage(5., 5.) == 5.);
+  assert(floatAverage(5., 10.) == 7.5);
+  Js.log("===============   End Tests   ==================");
+};
 
 runTests();
