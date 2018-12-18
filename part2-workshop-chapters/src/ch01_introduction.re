@@ -1,22 +1,27 @@
 /*
   To compile your code, run in a terminal session in the root directory
-
+  ```
     $ npm run build
-
+  ```
+  
   The code below compiles into *filename*.bs.js and our code should look like this:
-
+  ```
     console.log("Hello, World!!");
+  ```
 
-  For convenience you can build either whenever you change the code by saving your changes or from by running with watch mode on ($ npm run start).
+  For convenience you can build either whenever you change the code by saving your changes or from by running with watch mode on 
+  ``` 
+    $ npm run start
+  ```
 
 */
-print_endline("Hello, World!!");
+Js.log("Hello, World!!");
 
 /*
     Lets take a look on how we are going to run our tests:
     We will have a simple fuction that we need to implememnt in order for our test to pass
 
-    Try runing $ npm t in your console - you should get an error with something like this:
+    Try runing `npm test` in your console - you should get an error with something like this:
     
     ```
     /Users/alexko/Projects/PersonalPlayGround/workshops/reasonml/learn-reasonml-workshop/workshop-atoms/src/01-hello_world/introduction.bs.js:14
@@ -34,11 +39,12 @@ print_endline("Hello, World!!");
     Now lets make the test pass!
 */
 
-let truthy = () => assert(false);/* For you to implement */
+/* IMPLEMENT ME */
+let getSeven = () => assert(false);
 
 let runTests = () => {
-    Js.log("=============== Running Tests ==================")
-    assert (truthy()); 
+    Js.log("=============== Running Tests Ch01 =============")
+    assert (7 === getSeven()); 
     Js.log("===============   End Tests   ==================")
 }
 
