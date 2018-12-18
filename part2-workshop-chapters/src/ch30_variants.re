@@ -61,21 +61,20 @@ let score = cardRank => failwith("For you to implement");
  */
 let successor = cardRank => failwith("For you to implement");
 
+/* MAKE TESTS PASS */
 let runTests = () => {
-  Js.log(">>>>> running tests...");
+  Js.log("=============== Running Tests for " ++ __MODULE__);
 
-  Js.log("score");
   assert(11 == score(Ace));
   assert(10 == score(Jack));
   assert(5 == score(Number(5)));
 
-  Js.log("successor");
   assert(Number(4) == successor(Number(3)));
   assert(Jack == successor(Number(10)));
   assert(Ace == successor(King));
   assert(Number(2) == successor(Ace));
 
-  Js.log("<<<<< All tests passed!");
+  Js.log("=============== End Tests ====================");
 };
 
 runTests();
