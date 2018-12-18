@@ -34,7 +34,7 @@ assert (whatNumberAmIThinking(Some(7)) == "My number is: 7");
 let safeDivide = (~dividend, ~divisor) => failwith("For you to implement");
 
 /* card_of_int */
-/* firstLetter */
+/* firstLetter / safeHeadList */
 /* safe_int_of_string */
 
 

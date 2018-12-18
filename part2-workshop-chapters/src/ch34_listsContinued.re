@@ -2,8 +2,11 @@
   head
   tail
   find
-  iterate
-  rev 
+  nth
+  last
+  map
+  filter  
+  fold/reduce
   ?
  */
 

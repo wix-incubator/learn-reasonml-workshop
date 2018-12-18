@@ -48,9 +48,8 @@ let modulo = (~dividend, ~divisor) => failwith("For you to implement");
 /* 
   The following functions are examples of modules that use labels to 
   help clarify what their arugments mean:
- 
-  StringLabels.sub
-  Js.Re.fromStringWithFlags
-  Js.Math.pow_int
-  StdLabels.Array.make_matrix
-*/
+*/ 
+/* StringLabels.sub */
+/* Js.Re.fromStringWithFlags */
+/* Js.Math.pow_int */
+/* StdLabels.Array.make_matrix */
