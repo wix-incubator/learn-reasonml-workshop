@@ -31,6 +31,8 @@ module Inner = {
 assert(true == Inner.even(106))
 assert(false == Inner.even(7))
   
+
+Js.Math.random
 /* 
   MAKE ME PASS
   Uncomment the following tests, and make them pass by adding the appropriate 

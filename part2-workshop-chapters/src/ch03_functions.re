@@ -1,18 +1,12 @@
-/*
-  We use let to define functions.
+/* two ways of defining a function
+let foo x = 2 * x
+let bar = x => 2 * x
 
-  Definitions take on the form:
-  let functionName = (arg1, arg2) => body;
+*/
 
-  For example, here we define a function add1 that takes a single int
-  argument and returns that argument plus 1.
- */
-let add1 = arg => arg + 1;
+/* example?????? */
 
-/* This function uses the built-in ++ operator to append strings. */
-let stringAppend = (x, y) => x ++ y;
-
-/* Let's implement our own functions using +, -, *, and / below. */
+/* Let's implement our own functions using +, -, *, and / below.
 /* IMPLEMENT ME */
 let plus = (x, y) => assert(false)
 
@@ -22,25 +16,33 @@ let times = (x, y) => assert(false)
 /* IMPLEMENT ME */
 let minus = (x, y) => assert(false)
 
-
+/* IMPLEMENT ME */
 let divide = (x, y) => assert(false)
 
-/* Now lets say we were given those funtions below: */
-let square = x => x * x;
-let half = x => x / 2;
-let add = (x, y) => x + y;
+keep these!?!?!?
+other option
+ */
 
-/* You can order function invocations with parentheses or let bindings */
-/* Parentheses */
-let () = Js.log("(5^2)/2 = " ++ string_of_int(half(square(5))));
 
-/* Let bindings */
-let () = {
-  let squared = square(5);
+
+
+
+/* Now lets say we are given the following funtions: */
+let square = x => assert(false);
+let half = x => assert(false);
+assert("18" == string_of_int(half(square(5))))
+
+let calc = x => {
+  let squared = square(x);
   let halved = half(squared);
-  let toString = string_of_int(halved);
-  Js.log("(5^2)/2 = " ++ toString);
+  string_of_int(halved);
 };
+Js.log("(7^2)/2 = " ++ calc(7));
+
+/* fast pipe??? */
+let calc' = x => {
+  x |> square |> half |> string_of_int
+}
 
 /* Now lets try to write [average] by reusing [add] and [half] */
 /* IMPLEMENT ME */

@@ -37,18 +37,15 @@ let eightFloat = floatFour +. 4.;
   String concatenation is done with the ++ operator.
 
   To convert a String to a Char, use  - `"a".[0]`.
-   To convert a Char to a String, use - `String.make(1, 'a')`.
+  To convert a Char to a String, use - `String.make(1, 'a')`.
  */
+
 let firstName = "George";
 let lastName = "Bush";
-let midNameChar = 'W';
+let middleInitial = 'W';
 
-/*
-  You may have noticed that we didnt write the types this types.
-  Signatures are not always required! Reason has very strong type inference, so you can most often omit types,
-  and the compiler will infer the type of values (this case its a string).
- */
-let fullName = firstName ++ " " ++ String.make(1, midNameChar) ++ " " ++ lastName; /* fullName="George W Bush" */
+/* "George W. Bush" */
+Js.log(firstName ++ " " ++ String.make(1, middleInitial) ++ ". " ++ lastName);
 
 /*
   Booleans (https://reasonml.github.io/docs/en/boolean):
@@ -77,14 +74,15 @@ assert(aBooleanFalse && true);
   So the signature for a integer multiplication is:
 
   type intMult = (int, int) => int
-
-  #NOTE: In Reason there's no explicit return statement: functions just return the
-  value of the last statement in that function.
  */
 
 let intMult = (x, y) => x * y; /* intMult: (int, int) => int*/
 let floatMult = (x, y) => x *. y; /* floatMult: (float, float) => float*/
 
+/* 
+  Note: In Reason there's no explicit return statement: functions just return the
+  value of the last statement in that function.
+ */
 let verboseMult = (n, m) => {
   Js.log(
     "I'm multiplying two numbers: "
