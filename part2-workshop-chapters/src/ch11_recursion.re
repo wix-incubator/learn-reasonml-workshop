@@ -19,8 +19,7 @@ let rec addEveryNumberUpTo = x => {
   Remember: [factorial 0] is 1
  */
 let rec factorial = x => {
-  assert (x >= 0);
-  failwith("For you to implement");
+  assert(false);
 };
 
 /* Test.runAll([

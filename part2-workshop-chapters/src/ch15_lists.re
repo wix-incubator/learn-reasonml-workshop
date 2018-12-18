@@ -1,18 +1,4 @@
 /*
-  canibalize files from other owrhkshop
-
-  topics:
-
-  - intro
-  - how to contruct
-  - append
-  examples + exercises:
-  length, has (mem), range, sum, product, min, max, reverse
-
- */
-
-/*
-
  Reason natively supports linked lists as part of the language.
  Lists are commonly referred to as having heads and tails.
  The head is the first element of the linked list
@@ -50,6 +36,8 @@ let rec length = list => 314;
 let rec sum = list => 271;
 
 let rec max = list => 161;
+
+let rec reverse = list => 161;
 
 let rec last = list => 6022;
 

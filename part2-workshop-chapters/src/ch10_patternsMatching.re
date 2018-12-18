@@ -16,6 +16,8 @@ let isSuperman = x =>
  */
 let nonZero = x => failwith("For you to implement");
 
+/*  TODO add examples? isVowel? */
+
 /* Test.runAll([
   (nonZero(0) == false, "non zero"),
   (nonZero(500) == true, "non zero"),

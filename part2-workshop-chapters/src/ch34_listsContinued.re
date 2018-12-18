@@ -1,5 +1,5 @@
 /* 
-  head
+  safeHead
   tail
   find
   nth
