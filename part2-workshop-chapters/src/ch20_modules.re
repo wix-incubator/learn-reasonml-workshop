@@ -58,15 +58,20 @@ assert(true == List.mem(5, nums));
 assert(false == List.mem(17, nums));
 assert([7, 6, 5, 4] == List.rev(nums));
 
-
 /*
    MAKE ME PASS
    Uncomment the following tests, and make them pass by adding the appropriate
    modules and functions
  */
-/*
- assert(true == Inner.odd(47))
- assert(false == Inner.odd(48))
- assert(true == Example.Chars.isDigit('3'))
- assert(false == Example.Chars.isDigit('?'))
- */
+let runTests = () => {
+  Js.log("=============== Running Tests for " ++ __MODULE__);
+  /*
+   assert(true == Inner.odd(47))
+   assert(false == Inner.odd(48))
+   assert(true == Example.Chars.isDigit('3'))
+   assert(false == Example.Chars.isDigit('?'))
+   */
+  Js.log("=============== End Tests ====================");
+};
+
+runTests();
