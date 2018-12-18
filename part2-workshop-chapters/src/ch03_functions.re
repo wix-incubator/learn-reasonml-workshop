@@ -13,11 +13,15 @@ let add1 = arg => arg + 1;
 let stringAppend = (x, y) => x ++ y;
 
 /* Let's implement our own functions using +, -, *, and / below. */
+/* IMPLEMENT ME */
 let plus = (x, y) => assert(false)
 
+/* IMPLEMENT ME */
 let times = (x, y) => assert(false)
 
+/* IMPLEMENT ME */
 let minus = (x, y) => assert(false)
+
 
 let divide = (x, y) => assert(false)
 
@@ -39,10 +43,11 @@ let () = {
 };
 
 /* Now lets try to write [average] by reusing [add] and [half] */
+/* IMPLEMENT ME */
 let average = (x, y) => assert(false);
 
 let runTests = () => {
-    Js.log("=============== Running Tests ==================")
+    Js.log("=============== Running Tests Ch03 =============")
     assert (plus(1, 1) == 2); 
     assert (plus(50, -1) == 49);
     assert (times(8, 8) == 64);
