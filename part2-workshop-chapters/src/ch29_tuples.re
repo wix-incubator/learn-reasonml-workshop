@@ -44,7 +44,7 @@ let second = pair => failwith("For you to implement");
 
 /* NOTE: you can destructure in the function parameters: */
 /* let add = ((x1, y1, z1), (x2, y2, z2)) => (x1 + x2, y1 + y2, z1 + z2); */
-   
+
 /* NOTE: first and second are native: fst snd */
 /* NOTE: first and second are polymorphic */
 
@@ -61,19 +61,16 @@ let has7 = tuple => {
   };
 };
 
+/* MAKE TESTS PASS */
 let runTests = () => {
-  Js.log(">>>>> running tests...");
+  Js.log("=============== Running Tests for " ++ __MODULE__);
 
-  Js.log("norm");
+  assert(5. == norm((3., 4.)));
   assert(13. == norm((5., 12.)));
-
-  Js.log("first");
   assert("foo" == first(("foo", "bar")));
-
-  Js.log("second");
   assert("bar" == first(("foo", "bar")));
 
-  Js.log("<<<<< All tests passed!");
+  Js.log("=============== End Tests ====================");
 };
 
 runTests();
