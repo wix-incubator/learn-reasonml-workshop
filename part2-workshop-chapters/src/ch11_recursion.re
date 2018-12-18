@@ -22,6 +22,8 @@ let rec factorial = x => {
   assert(false);
 };
 
+/* TODO ackerman? fibo? */
+
 /* Test.runAll([
   (factorial(0) == 1, "factorial"),
   (factorial(5) == 120, "factorial"),

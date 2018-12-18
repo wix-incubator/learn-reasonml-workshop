@@ -32,18 +32,6 @@ assert(true == Inner.even(106));
 assert(false == Inner.even(7));
 
 /*
-   MAKE ME PASS
-   Uncomment the following tests, and make them pass by adding the appropriate
-   modules and functions
- */
-/*
- assert(true == Inner.odd(47))
- assert(false == Inner.odd(48))
- assert(true == Example.Chars.isDigit('3'))
- assert(false == Example.Chars.isDigit('?'))
- */
-
-/*
   By default, the `Pervasives` module (https://reasonml.github.io/api/Pervasives.html)
   is opened and all its methods are available without prefixing them, e.g. you can simply
   invoke the function `int_of_string` instead of `Pervasives.int_of_string`.
@@ -69,3 +57,16 @@ assert(4 == List.length(nums));
 assert(true == List.mem(5, nums));
 assert(false == List.mem(17, nums));
 assert([7, 6, 5, 4] == List.rev(nums));
+
+
+/*
+   MAKE ME PASS
+   Uncomment the following tests, and make them pass by adding the appropriate
+   modules and functions
+ */
+/*
+ assert(true == Inner.odd(47))
+ assert(false == Inner.odd(48))
+ assert(true == Example.Chars.isDigit('3'))
+ assert(false == Example.Chars.isDigit('?'))
+ */

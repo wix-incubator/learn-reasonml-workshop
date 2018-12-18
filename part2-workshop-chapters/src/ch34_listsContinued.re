@@ -1,5 +1,6 @@
 /* 
-  safeHead
+  example of safeHead vs head?
+
   tail
   find
   nth
@@ -10,4 +11,4 @@
   ?
  */
 
- 
+ Í
