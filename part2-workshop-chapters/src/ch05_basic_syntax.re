@@ -58,9 +58,8 @@ Js.log(
   !  for logical not
  */
 
-/* MAKE ME PASS */
 let aBooleanFalse = false;
-assert(aBooleanFalse && true);
+assert(true == !aBooleanFalse)
 
 /*
   Function signatures
@@ -110,6 +109,7 @@ let verboseMult = (n, m) => {
 let whatIsTheTime = () => {
   Js.log("The time now is: " ++ string_of_float(Js.Date.now()));
 };
+
 
 /* call the function with the value of type unit */
 whatIsTheTime();
