@@ -55,8 +55,6 @@ StdLabels.Array.make_matrix;
  */
 let modulo = (~dividend, ~divisor) => assert(false);
 
-/* MAKE TESTS PASS */
-
 TestUtils.runTests(
   __MODULE__,
   () => {
