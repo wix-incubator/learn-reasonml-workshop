@@ -38,14 +38,45 @@ let addTwo = assert(false);
 let raiseToTheFourth = assert(false);
 
 /* 
-  Pipe:
+  Pipe / reverse-application:
   ===================
-  Reason has a special syntax `|>` called 
+  The operator |> is called reverse-application operator or pipe operator. 
+  It lets you chain function calls: x |> f is the same as f(x). 
+  That may not look like much, but it is quite useful when combining function calls.
 */
-/* pipe??? */
-/* let calc' = x => {
-  x |> square |> half |> string_of_int
-} */
+
+/* Example: */
+let calc = x => {
+  x /* some input */
+  |> square /* x => x * x */
+  |> addOne /* x => x + 1 */
+  |> addTwo /* x => x + 2 */
+}
+
+/* 
+  Type parametricity:
+  ===================
+  The most trivial function is `id`: 
+*/
+let intId = (x: int) => x;
+let stringId = (x: string) => x;
+let boolId = (x: bool) => x;
+
+/*
+ If you think about it, we don't really care what type we're given.
+ Look at the default type signature `id` has:
+ */
+
+let id = x => x;
+
+/*
+ `id` can take any type, marked as 'a, and returns a value of the same type.
+
+ Since `x` is not altered directly, the compiler infers that `id` is polymorphic,
+ meaning it can take any type. The moment we do with it something, the compiler
+ infers the type by the function we apply:
+*/
+let successor = x => x + 1;
 
 let runTests = () => {
     Js.log("=============== Running Tests for " ++ __MODULE__);
