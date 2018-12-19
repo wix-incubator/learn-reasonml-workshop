@@ -12,9 +12,7 @@
 
 [@bs.val]
 external sqrt : float => float = "Math.sqrt";
-let four = sqrt(16.0); /* => 4 */
-
-Js.log("ss " ++ string_of_float(four));
+Js.log("ss " ++ string_of_float(sqrt(16.0))); /* 4 */
 
 /*
   In that code we declare a binding for the JavaScript `Math.sqrt` function,
@@ -25,3 +23,14 @@ Js.log("ss " ++ string_of_float(four));
 
   Notice that we used the [@bs.val] attributes to indicate to the compiler that we are declaring a binding for a value.
 */
+
+
+[@bs.val]
+external readFileAsUtf8Sync : string => string = "Node.Fs.readFileAsUtf8Sync";
+
+Js.log(readFileAsUtf8Sync("test.txt"));
+
+/* let () =
+  readFileAsUtf8Sync("README.md")
+  |> Js.String.splitg "\n"
+  |> Array.iter Js.log; */
