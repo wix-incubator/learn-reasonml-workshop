@@ -21,16 +21,6 @@ let square = x => assert(false);
 /* IMPLEMENT ME */
 let half = x => assert(false);
 
-/* 
-  Fast pipe:
-  ===================
-  Reason has a special syntax `|>` called 
-*/
-/* fast pipe??? */
-let calc' = x => {
-  x |> square |> half |> string_of_int
-}
-
 let runTests = () => {
     Js.log("=============== Running Tests Ch03 =============")
     assert (square(2) == 4);
