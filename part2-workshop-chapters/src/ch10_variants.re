@@ -61,8 +61,6 @@ let score = cardRank => assert(false);
  */
 let successor = cardRank => assert(false);
 
-/* MAKE TESTS PASS */
-
 TestUtils.runTests(
   __MODULE__,
   () => {
