@@ -62,19 +62,30 @@ let score = cardRank => assert(false);
 let successor = cardRank => assert(false);
 
 /* MAKE TESTS PASS */
-let runTests = () => {
-  Js.log("=============== Running Tests for " ++ __MODULE__);
 
-  assert(11 == score(Ace));
-  assert(10 == score(Jack));
-  assert(5 == score(Number(5)));
-
-  assert(Number(4) == successor(Number(3)));
-  assert(Jack == successor(Number(10)));
-  assert(Ace == successor(King));
-  assert(Number(2) == successor(Ace));
-
-  Js.log("=============== End Tests ====================");
-};
-
-runTests();
+TestUtils.runTests(
+  __MODULE__,
+  () => {
+    TestUtils.test("should get the rank of an Ace", () =>
+      assert(11 == score(Ace))
+    );
+    TestUtils.test("should get the rank of a Jack", () =>
+      assert(10 == score(Jack))
+    );
+    TestUtils.test("should get the rank of Number", () =>
+      assert(5 == score(Number(5)))
+    );
+    TestUtils.test("should get the successor of 3", () =>
+      assert(Number(4) == successor(Number(3)))
+    );
+    TestUtils.test("should get the successor of 10", () =>
+      assert(Jack == successor(Number(10)))
+    );
+    TestUtils.test("should get the successor of a King", () =>
+      assert(Ace == successor(King))
+    );
+    TestUtils.test("should get the successor of an Ace", () =>
+      assert(Number(2) == successor(Ace))
+    );
+  },
+);

@@ -63,15 +63,20 @@ assert([7, 6, 5, 4] == List.rev(nums));
    Uncomment the following tests, and make them pass by adding the appropriate
    modules and functions
  */
-let runTests = () => {
-  Js.log("=============== Running Tests for " ++ __MODULE__);
-  /*
-   assert(true == Inner.odd(47))
-   assert(false == Inner.odd(48))
-   assert(true == Example.Chars.isDigit('3'))
-   assert(false == Example.Chars.isDigit('?'))
-   */
-  Js.log("=============== End Tests ====================");
-};
 
-runTests();
+TestUtils.runTests(__MODULE__, () =>
+  {
+    /* TestUtils.test("should return if odd", () =>
+         assert(true == Inner.odd(47))
+       );
+       TestUtils.test("should return if even", () =>
+         assert(false == Inner.odd(48))
+       );
+       TestUtils.test("should return if digit", () =>
+         assert(true == Example.Chars.isDigit('3'))
+       );
+       TestUtils.test("should return if digit", () =>
+         assert(false == Example.Chars.isDigit('?'))
+       ); */
+  }
+);
