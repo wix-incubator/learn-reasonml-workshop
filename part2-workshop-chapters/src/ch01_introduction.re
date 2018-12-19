@@ -43,7 +43,7 @@ Js.log("Hello, World!!");
 let getSeven = () => assert(false);
 
 let runTests = () => {
-    Js.log("=============== Running Tests Ch01 =============")
+    Js.log("=============== Running Tests for " ++ __MODULE__);
     assert (7 === getSeven()); 
     Js.log("===============   End Tests   ==================")
 }

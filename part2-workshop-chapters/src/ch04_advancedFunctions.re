@@ -48,7 +48,7 @@ let raiseToTheFourth = assert(false);
 } */
 
 let runTests = () => {
-    Js.log("=============== Running Tests Ch03 =============")
+    Js.log("=============== Running Tests for " ++ __MODULE__);
     assert (twice(addOne, 3) == 5);
     assert (addTwo(1335) == 1337);
     assert (raiseToTheFourth(1) == 1);

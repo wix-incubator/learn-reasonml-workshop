@@ -119,7 +119,7 @@ let intAverage = (x, y) => assert(false);
 let floatAverage = (x, y) => assert(false);
 
 let runTests = () => {
-  Js.log("=============== Running Tests Ch02 =============");
+  Js.log("=============== Running Tests for " ++ __MODULE__);
   assert(floatAverage(5., 5.) == 5.);
   assert(floatAverage(5., 10.) == 7.5);
   Js.log("===============   End Tests   ==================");

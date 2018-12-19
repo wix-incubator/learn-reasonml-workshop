@@ -22,7 +22,7 @@ let square = x => assert(false);
 let half = x => assert(false);
 
 let runTests = () => {
-    Js.log("=============== Running Tests Ch03 =============")
+    Js.log("=============== Running Tests for " ++ __MODULE__);
     assert (square(2) == 4);
     assert (half(4) == 2); 
     assert(string_of_int(half(square(4))) == "8")
