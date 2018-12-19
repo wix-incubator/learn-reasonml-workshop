@@ -51,7 +51,7 @@ let string_of_cardRank = rank =>
   Write a function that computes the score of a card (aces should score 11
   and face cards should score 10).
  */
-let score = cardRank => failwith("For you to implement");
+let score = cardRank => assert(false);
 
 /*
   Write a function that returns the succesor of the given card.
@@ -59,7 +59,7 @@ let score = cardRank => failwith("For you to implement");
   successor(Number(3)) === Number(4)
   successor(Queen) === King
  */
-let successor = cardRank => failwith("For you to implement");
+let successor = cardRank => assert(false);
 
 /* MAKE TESTS PASS */
 let runTests = () => {

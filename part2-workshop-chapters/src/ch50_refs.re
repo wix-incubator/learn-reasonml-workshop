@@ -24,7 +24,7 @@ let () = x := x^ + 1;
 
   Hint: [max_int] or [min_int].
  */
-let minAndMax = nums => failwith("For you to implement");
+let minAndMax = nums => assert(false);
 
 /* MAKE TESTS PASS */
 let runTests = () => {

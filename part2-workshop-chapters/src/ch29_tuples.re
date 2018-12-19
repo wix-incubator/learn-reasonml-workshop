@@ -26,21 +26,21 @@ assert((3, 4, 5) == add3d((1, 1, 1), (2, 3, 4)));
  hint: Js.Math.sqrt
  */
 type coord2d = (float, float);
-let norm = (point: coord2d) => failwith("For you to implement");
+let norm = (point: coord2d) => assert(false);
 
 /*
  IMPLEMENT ME
  Write a function to extract the first element from a pair.
  e.g.: first((3,4)) === 3
  */
-let first = pair => failwith("For you to implement");
+let first = pair => assert(false);
 
 /*
  IMPLEMENT ME
  Write functions to extract the first and second elements from a pair.
  e.g.: second((3,4)) == 4
  */
-let second = pair => failwith("For you to implement");
+let second = pair => assert(false);
 
 /* NOTE: you can destructure in the function parameters: */
 /* let add = ((x1, y1, z1), (x2, y2, z2)) => (x1 + x2, y1 + y2, z1 + z2); */
