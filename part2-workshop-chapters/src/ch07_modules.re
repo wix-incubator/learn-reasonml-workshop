@@ -60,8 +60,8 @@ assert([7, 6, 5, 4] == List.rev(nums));
 
 /*
    MAKE ME PASS
-   Uncomment the following tests, and make them pass by adding the appropriate
-   modules and functions
+   Uncomment the following tests, fix the compilation errors, and make the tests pass 
+   by adding the appropriate modules and functions
  */
 
 TestUtils.runTests(__MODULE__, () =>
