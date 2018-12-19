@@ -44,8 +44,6 @@ let safeDivide = (~dividend, ~divisor) => assert(false);
 /* IMPLEMENT ME */
 let safe_int_of_char = c => assert(false);
 
-/* MAKE TESTS PASS */
-
 TestUtils.runTests(
   __MODULE__,
   () => {
