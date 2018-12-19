@@ -45,7 +45,9 @@ let lastName = "Bush";
 let middleInitial = 'W';
 
 /* "George W. Bush" */
-Js.log(firstName ++ " " ++ String.make(1, middleInitial) ++ ". " ++ lastName);
+Js.log(
+  firstName ++ " " ++ String.make(1, middleInitial) ++ ". " ++ lastName,
+);
 
 /*
   Booleans (https://reasonml.github.io/docs/en/boolean):
@@ -79,7 +81,7 @@ assert(aBooleanFalse && true);
 let intMult = (x, y) => x * y; /* intMult: (int, int) => int*/
 let floatMult = (x, y) => x *. y; /* floatMult: (float, float) => float*/
 
-/* 
+/*
   Note: In Reason there's no explicit return statement: functions just return the
   value of the last statement in that function.
  */
@@ -118,11 +120,14 @@ let intAverage = (x, y) => assert(false);
 /* IMPLEMENT ME */
 let floatAverage = (x, y) => assert(false);
 
-let runTests = () => {
-  Js.log("=============== Running Tests for " ++ __MODULE__);
-  assert(floatAverage(5., 5.) == 5.);
-  assert(floatAverage(5., 10.) == 7.5);
-  Js.log("===============   End Tests   ==================");
-};
-
-runTests();
+TestUtils.runTests(
+  __MODULE__,
+  () => {
+    TestUtils.test("should calculate float average", () =>
+      assert(floatAverage(5., 5.) == 5.)
+    );
+    TestUtils.test("should calculate float average", () =>
+      assert(floatAverage(5., 10.) == 7.5)
+    );
+  },
+);
