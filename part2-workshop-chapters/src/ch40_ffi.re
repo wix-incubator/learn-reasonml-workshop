@@ -26,9 +26,8 @@ Js.log(string_of_float(sqrt(16.0))); /* 4 */
 */
 
 /*
-  Lets take a look at amother simple example:
+  Lets take a look at another simple example:
  */
-
 [@bs.val]
 external clog : string => unit = "console.log";
 clog("heyo from js \(^_^)/ ");
@@ -60,4 +59,6 @@ Reason community created alot of other usefull binding such as the following:
 https://github.com/glennsl/bs-jest  - jest binding for testing
 
 https://github.com/reasonml/reason-react  - react binding
+
+and much more...you can take a look here : https://github.com/reasonml-community/
 */
