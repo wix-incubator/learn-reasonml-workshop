@@ -13,7 +13,39 @@ assert(0 == x^);
   We update the ref using the := operator. So, we could increment our
   ref as follows:
  */
-let () = x := x^ + 1;
+x := x^ + 1;
+assert(1 == x^);
+
+/*
+  You can write imperative code when it makes more sense using a for loop!
+  Let's take a look at a different implementation of the factorial function:
+ */
+let factorialWithForLoop = n => {
+  let result = ref(1);
+
+  for (i in 1 to n) {
+    result := result^ * i;
+  };
+
+  result^;
+};
+assert(120 == factorialWithForLoop(5));
+
+/*
+  Or you can use a while loop if you fancy!
+ */
+let factorialWithWhileLoop = n => {
+  let i = ref(1);
+  let result = ref(1);
+
+  while (i^ <= n) {
+    result := result^ * i^;
+    i := i^ + 1;
+  };
+
+  result^;
+};
+assert(120 == factorialWithWhileLoop(5));
 
 /*
   Write a function minAndMax which returns a tuple containing the minimum
@@ -26,14 +58,14 @@ let () = x := x^ + 1;
  */
 let minAndMax = nums => assert(false);
 
-/* MAKE TESTS PASS */
-let runTests = () => {
-  Js.log("=============== Running Tests for " ++ __MODULE__);
-
-  assert((2, 9) == minAndMax([5, 9, 2, 4, 3]));
-  assert((7, 34) == minAndMax([11, 15, 7, 34]));
-
-  Js.log("=============== End Tests ====================");
-};
-
-runTests();
+TestUtils.runTests(
+  __MODULE__,
+  () => {
+    TestUtils.test("should min and max", () =>
+      assert((2, 9) == minAndMax([5, 9, 2, 4, 3]))
+    );
+    TestUtils.test("should min and max", () =>
+      assert((7, 34) == minAndMax([11, 15, 7, 34]))
+    );
+  },
+);

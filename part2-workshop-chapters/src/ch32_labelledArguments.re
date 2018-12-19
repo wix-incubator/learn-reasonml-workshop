@@ -56,14 +56,18 @@ StdLabels.Array.make_matrix;
 let modulo = (~dividend, ~divisor) => assert(false);
 
 /* MAKE TESTS PASS */
-let runTests = () => {
-  Js.log("=============== Running Tests for " ++ __MODULE__);
 
-  assert(1 == modulo(~dividend=7, ~divisor=2));
-  assert(0 == modulo(~dividend=12, ~divisor=4));
-  assert(8 == modulo(~dividend=24, ~divisor=16));
-
-  Js.log("=============== End Tests ====================");
-};
-
-runTests();
+TestUtils.runTests(
+  __MODULE__,
+  () => {
+    TestUtils.test("should calculate modulo", () =>
+      assert(1 == modulo(~dividend=7, ~divisor=2))
+    );
+    TestUtils.test("should calculate modulo", () =>
+      assert(0 == modulo(~dividend=12, ~divisor=4))
+    );
+    TestUtils.test("should calculate modulo after reordering params", () =>
+      assert(8 == modulo(~dividend=24, ~divisor=16))
+    );
+  },
+);

@@ -23,7 +23,7 @@ assert((3, 4, 5) == add3d((1, 1, 1), (2, 3, 4)));
 
 /*
  IMPLEMENT ME
- hint: Js.Math.sqrt
+ hint: sqrt
  */
 type coord2d = (float, float);
 let norm = (point: coord2d) => assert(false);
@@ -62,15 +62,21 @@ let has7 = tuple => {
 };
 
 /* MAKE TESTS PASS */
-let runTests = () => {
-  Js.log("=============== Running Tests for " ++ __MODULE__);
 
-  assert(5. == norm((3., 4.)));
-  assert(13. == norm((5., 12.)));
-  assert("foo" == first(("foo", "bar")));
-  assert("bar" == first(("foo", "bar")));
-
-  Js.log("=============== End Tests ====================");
-};
-
-runTests();
+TestUtils.runTests(
+  __MODULE__,
+  () => {
+    TestUtils.test("should calculate normal", () =>
+      assert(5. == norm((3., 4.)))
+    );
+    TestUtils.test("should calculate normal", () =>
+      assert(13. == norm((5., 12.)))
+    );
+    TestUtils.test("should get first from a tuple", () =>
+      assert("foo" == first(("foo", "bar")))
+    );
+    TestUtils.test("should get second from a tuple", () =>
+      assert("bar" == second(("foo", "bar")))
+    );
+  },
+);
