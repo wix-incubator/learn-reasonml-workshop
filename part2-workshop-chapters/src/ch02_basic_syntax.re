@@ -36,7 +36,7 @@ let eightFloat = floatFour +. 4.;
   As in many languages strings are denoted with "" and chars are denoted with ''.
   String concatenation is done with the ++ operator.
 
-  To convert a String to a Char, use  - `"a".[0]`.
+  To convert a String to a Char, use - `"a".[0]`.
   To convert a Char to a String, use - `String.make(1, 'a')`.
  */
 

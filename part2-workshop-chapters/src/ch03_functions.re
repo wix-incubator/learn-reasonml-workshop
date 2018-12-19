@@ -1,66 +1,41 @@
-/* two ways of defining a function
-let foo x = 2 * x
-let bar = x => 2 * x
-
+/* 
+  Function (https://reasonml.github.io/docs/en/function.html)
+  ===================
+  Lets dive in to functions!
+  
+  There are two ways of defining a function:
+  With an arrow and return the expression as we previosuly used
 */
+  let bar = x => 2 * x;
 
-/* example?????? */
+  /* Or as such: */
+  let foo (x) = 2 * x;
 
-/* Let's implement our own functions using +, -, *, and / below.
-/* IMPLEMENT ME */
-let plus = (x, y) => assert(false)
+/* Both syntaxes are valid and in the end compile to the same code (minus the name in this case :D ). */
 
-/* IMPLEMENT ME */
-let times = (x, y) => assert(false)
-
-/* IMPLEMENT ME */
-let minus = (x, y) => assert(false)
+/* Let's implement a couple of our own functions */
 
 /* IMPLEMENT ME */
-let divide = (x, y) => assert(false)
-
-keep these!?!?!?
-other option
- */
-
-
-
-
-
-/* Now lets say we are given the following funtions: */
 let square = x => assert(false);
+
+/* IMPLEMENT ME */
 let half = x => assert(false);
-assert("18" == string_of_int(half(square(5))))
 
-let calc = x => {
-  let squared = square(x);
-  let halved = half(squared);
-  string_of_int(halved);
-};
-Js.log("(7^2)/2 = " ++ calc(7));
-
+/* 
+  Fast pipe:
+  ===================
+  Reason has a special syntax `|>` called 
+*/
 /* fast pipe??? */
 let calc' = x => {
   x |> square |> half |> string_of_int
 }
 
-/* Now lets try to write [average] by reusing [add] and [half] */
-/* IMPLEMENT ME */
-let average = (x, y) => assert(false);
-
 let runTests = () => {
     Js.log("=============== Running Tests Ch03 =============")
-    assert (plus(1, 1) == 2); 
-    assert (plus(50, -1) == 49);
-    assert (times(8, 8) == 64);
-    assert (times(2, -1024) == (-2048));
-    assert (minus(-2, 2) == (-4));
-    assert (minus(1337, 337) == 1000);
-    assert (divide(1024, 2) == 512);
-    assert (divide(31337, 31) == 1010); 
-
-    assert (average(5, 5) == 5);
-    assert (average(50, 100) == 75); 
+    assert (square(2) == 4);
+    assert (half(4) == 2); 
+    assert(string_of_int(half(square(4))) == "8")
     Js.log("===============   End Tests   ==================")
 }
 
