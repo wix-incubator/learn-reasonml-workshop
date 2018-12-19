@@ -13,7 +13,39 @@ assert(0 == x^);
   We update the ref using the := operator. So, we could increment our
   ref as follows:
  */
-let () = x := x^ + 1;
+x := x^ + 1;
+assert(1 == x^);
+
+/*
+  You can write imperative code when it makes more sense using a for loop!
+  Let's take a look at a different implementation of the factorial function:
+ */
+let factorialWithForLoop = n => {
+  let result = ref(1);
+
+  for (i in 1 to n) {
+    result := result^ * i;
+  };
+
+  result^;
+};
+assert(120 == factorialWithForLoop(5));
+
+/*
+  Or you can use a while loop if you fancy!
+ */
+let factorialWithWhileLoop = n => {
+  let i = ref(1);
+  let result = ref(1);
+
+  while (i^ <= n) {
+    result := result^ * i^;
+    i := i^ + 1;
+  };
+
+  result^;
+};
+assert(120 == factorialWithWhileLoop(5));
 
 /*
   Write a function minAndMax which returns a tuple containing the minimum
@@ -25,8 +57,6 @@ let () = x := x^ + 1;
   Hint: [max_int] or [min_int].
  */
 let minAndMax = nums => assert(false);
-
-/* MAKE TESTS PASS */
 
 TestUtils.runTests(
   __MODULE__,
