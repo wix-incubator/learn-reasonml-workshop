@@ -23,7 +23,7 @@ assert((3, 4, 5) == add3d((1, 1, 1), (2, 3, 4)));
 
 /*
  IMPLEMENT ME
- hint: Js.Math.sqrt
+ hint: sqrt
  */
 type coord2d = (float, float);
 let norm = (point: coord2d) => assert(false);
