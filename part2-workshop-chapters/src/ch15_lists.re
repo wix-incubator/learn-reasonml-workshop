@@ -41,12 +41,24 @@ let rec reverse = list => [];
 
 let rec last = list => 6022;
 
-assert(length(listOfSomeNumbers) == 10);
-assert(sum(listOfSomeNumbers) == 42);
-assert(max(listOfSomeNumbers) == 9);
-assert(reverse(listOfSomeNumbers) == [3, 9, 5, 3, 5, 7, 5, 0, 5, 0]);
-assert(last(listOfSomeNumbers) == 3);
-
-/* do you see the common pattern? */
-let nth = (n,list) => 5;
-[1,2,3] |> nth(3) 
+TestUtils.runTests(
+  __MODULE__,
+  () => {
+    TestUtils.test("should get list length", () =>
+      assert(length(listOfSomeNumbers) == 10)
+    );
+    TestUtils.test("should calculate sum of the list", () =>
+      assert(sum(listOfSomeNumbers) == 42)
+    );
+    TestUtils.test("should get max element in a list", () =>
+      assert(max(listOfSomeNumbers) == 9)
+    );
+    TestUtils.test("should return reversed list", () =>
+      assert(reverse(listOfSomeNumbers) == [3, 9, 5, 3, 5, 7, 5, 0, 5, 0])
+    );
+    TestUtils.test("should return last element in a list", () =>
+      assert(last(listOfSomeNumbers) == 3)
+    );
+  },
+);
+/* do you see the common pattern in your implementation? */
