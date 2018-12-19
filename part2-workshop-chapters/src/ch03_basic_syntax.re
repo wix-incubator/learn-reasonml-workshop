@@ -128,14 +128,29 @@ let intAverage = (x, y) => assert(false);
 /* IMPLEMENT ME */
 let floatAverage = (x, y) => assert(false);
 
+/* IMPLEMENT ME */
+let square = x => assert(false);
+
+/* IMPLEMENT ME */
+let half = x => assert(false);
+
 TestUtils.runTests(
   __MODULE__,
   () => {
-    TestUtils.test("should calculate float average", () =>
-      assert(floatAverage(5., 5.) == 5.)
+    TestUtils.test("should calculate int average", () =>
+      assert(floatAverage(3, 5) == 4)
     );
     TestUtils.test("should calculate float average", () =>
       assert(floatAverage(5., 10.) == 7.5)
+    );
+    TestUtils.test("should calculate square", () =>
+      assert(square(6) == 36)
+    );
+    TestUtils.test("should calculate half", () =>
+      assert(half(42) == 21)
+    );
+    TestUtils.test("should calculate something complext", () =>
+      string_of_int(half(square(4))) == "8"
     );
   },
 );
