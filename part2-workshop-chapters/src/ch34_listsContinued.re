@@ -20,7 +20,7 @@ let rec reduce = (fn, init, list) => assert(false);
 
 let isEven = n => n mod 2 == 0;
 
-Example.runTests(
+TestUtils.runTests(
   __MODULE__,
   () => {
     TestUtils.test("should return None for empty lists", () =>
