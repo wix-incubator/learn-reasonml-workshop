@@ -7,7 +7,7 @@
  */
 let rec addEveryNumberUpTo = x => {
   /* make sure we don't call this on negative numbers! */
-  assert (x >= 0);
+  assert(x >= 0);
   switch (x) {
   | 0 => 0
   | _ => x + addEveryNumberUpTo(x - 1)
@@ -19,13 +19,21 @@ let rec addEveryNumberUpTo = x => {
   Remember: [factorial 0] is 1
  */
 let rec factorial = x => {
+  assert(x >= 0);
   assert(false);
 };
 
-/* TODO ackerman? fibo? */
-
-/* Test.runAll([
-  (factorial(0) == 1, "factorial"),
-  (factorial(5) == 120, "factorial"),
-  (factorial(12) == 479001600, "factorial"),
-]); */
+TestUtils.runTests(
+  __MODULE__,
+  () => {
+    TestUtils.test("should calculate factorial(0)", () =>
+      assert(factorial(0) == 1)
+    );
+    TestUtils.test("should calculate factorial(5)", () =>
+      assert(factorial(5) == 1)
+    );
+    TestUtils.test("should calculate factorial(120)", () =>
+      assert(factorial(120) == 1)
+    );
+  },
+);
