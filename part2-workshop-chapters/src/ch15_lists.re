@@ -29,17 +29,22 @@ let rec join = list =>
 
 assert(join(listOfSomeNumbers) == "0505753593");
 
-/* now you implement*/
+/* now you implement */
 
-let rec length = list => 314;
+/* length - should get list length */
+let rec length = list => assert(false);
 
-let rec sum = list => 271;
+/* sum -should calculate sum of the list */
+let rec sum = list => assert(false);
 
-let rec max = list => 161;
+/* max - should get max element in a list */
+let rec max = list => assert(false);
 
-let rec reverse = list => [];
+/* reverse - should return reversed list */
+let rec reverse = list => assert(false);
 
-let rec last = list => 6022;
+/* last - should return last element in a list */
+let rec last = list => assert(false);
 
 TestUtils.runTests(
   __MODULE__,

@@ -5,6 +5,10 @@ let runTests = (description, fn) => {
 };
 
 let test = (description, fn) => {
-  fn();
+  try (fn()) {
+  | exn =>
+    Js.log(description ++ " " ++ {js|✘|js});
+    raise(exn);
+  };
   Js.log(description ++ " " ++ {js|✔|js});
 };
