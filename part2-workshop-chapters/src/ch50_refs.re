@@ -27,13 +27,15 @@ let () = x := x^ + 1;
 let minAndMax = nums => assert(false);
 
 /* MAKE TESTS PASS */
-let runTests = () => {
-  Js.log("=============== Running Tests for " ++ __MODULE__);
 
-  assert((2, 9) == minAndMax([5, 9, 2, 4, 3]));
-  assert((7, 34) == minAndMax([11, 15, 7, 34]));
-
-  Js.log("=============== End Tests ====================");
-};
-
-runTests();
+TestUtils.runTests(
+  __MODULE__,
+  () => {
+    TestUtils.test("should min and max", () =>
+      assert((2, 9) == minAndMax([5, 9, 2, 4, 3]))
+    );
+    TestUtils.test("should min and max", () =>
+      assert((7, 34) == minAndMax([11, 15, 7, 34]))
+    );
+  },
+);
