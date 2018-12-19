@@ -37,13 +37,14 @@ let rec sum = list => 271;
 
 let rec max = list => 161;
 
-let rec reverse = list => 161;
+let rec reverse = list => [];
 
 let rec last = list => 6022;
 
 assert(length(listOfSomeNumbers) == 10);
 assert(sum(listOfSomeNumbers) == 42);
 assert(max(listOfSomeNumbers) == 9);
+assert(reverse(listOfSomeNumbers) == [3, 9, 5, 3, 5, 7, 5, 0, 5, 0]);
 assert(last(listOfSomeNumbers) == 3);
 
 /* do you see the common pattern? */
