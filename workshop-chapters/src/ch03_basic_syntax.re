@@ -31,24 +31,26 @@ let floatFourWithSignature: float = 4.;
 /* Uncomment the following line to see the compilation error */
 /* let seven: float = 7; */
 
+/* IMPLEMENT ME */
+let intAverage = (x, y) => assert(false);
+
+/* IMPLEMENT ME */
+let floatAverage = (x, y) => assert(false);
+
 /*
   String and Chars (https://reasonml.github.io/docs/en/string-and-char):
   ===============
   As in many languages strings are denoted with "" and chars are denoted with ''.
   String concatenation is done with the ++ operator.
-
-  To convert a String to a Char, use - `"a".[0]`.
-  To convert a Char to a String, use - `String.make(1, 'a')`.
  */
 
-let firstName = "George";
-let lastName = "Bush";
-let middleInitial = 'W';
+let firstName = "Shlomi";
+let lastName = "Toussia";
+let lastestName = "Cohen";
 
-/* "George W. Bush" */
-Js.log(
-  firstName ++ " " ++ String.make(1, middleInitial) ++ ". " ++ lastName,
-);
+let myHero = firstName ++ lastName ++ lastestName;
+
+assert("Shlomi Toussia Cohen" == myHero);
 
 /*
  Booleans (https://reasonml.github.io/docs/en/boolean):
@@ -76,7 +78,8 @@ assert(true == !aBooleanFalse);
  So the signature for a integer multiplication is:
  type intMult = (int, int) => int
 
- hover your mouse of the function name to see it
+ Reason knows to infer the function type by its body. hover your mouse
+ over the function name to see it
  */
 
 let intMult = (x, y) => x * y;
@@ -84,7 +87,7 @@ let intMult = (x, y) => x * y;
 let floatMult = (x, y) => x *. y;
 
 /*
- Note: In Reason there's no explicit return statement!
+ Note: In Reason there's no explicit return statement, just like Ruby / Perl
  Functions return the value of the last expression in that function.
  */
 let verboseMult = (n, m) => {
@@ -100,33 +103,35 @@ let verboseMult = (n, m) => {
 };
 
 /*
-  The [unit] type (https://reasonml.github.io/docs/en/function.html#no-argument)
-  ===============
-  In a strongly typed language like Reason you need to define what a function gets and returns
-  every time, but sometimes a function neither returns anything nor takes any input,
-  e.g. Js.log, Js.Math.random, Js.Date.now, etc.
+   The [unit] type (https://reasonml.github.io/docs/en/function.html#no-argument)
+   ===============
+   In a strongly typed language like Reason you need to define what a function gets and returns
+   every time, but sometimes a function neither returns anything nor takes any input.
 
-  In these cases, the function will receive unit as an argument or return unit as a result.
+   In case the function returns nothing (similiar to javascript returning `undefined` or C functions
+   returning `void`), in Reason the function will return `()` called unit. `()` is a singleton value
+   of type `unit`.
 
-  `()` is called "unit" and is a singleton value of type `unit`.
-
-  hover your mouse over the different inner functions to see their types.
-
-  Note: `Js.Date.now()` is actually short-hand for `Js.Date.now(())`
+   hover your mouse over the following functions and look at their return type:
  */
+Js.log;
+Node.Process.exit;
+Dom.Storage.setItem;
 
-let whatIsTheTime = () => {
-  Js.log("The time now is: " ++ string_of_float(Js.Date.now()));
-};
+/*
+   In cases where the function needs no input, in Reason it must receive a value so we pass in `()`
 
-/* call the `whatIsTheTime` with the value of type unit */
-whatIsTheTime(); /* same as `whatIsTheTime(());` */
+   hover your mouse over the following functions and look at their return type:
+ */
+Js.Date.now;
+Js.Math.random;
 
-/* IMPLEMENT ME */
-let intAverage = (x, y) => assert(false);
+/*
+   Please note that we invoke `Js.Math.random()` but this is just syntactic suger for `Js.Math.random(())`
+ */
+Js.log("I picked a random number: " ++ string_of_float(Js.Math.random()));
 
-/* IMPLEMENT ME */
-let floatAverage = (x, y) => assert(false);
+/* Let's do a couple of exercises for shits and giggles */
 
 /* IMPLEMENT ME */
 let square = x => assert(false);
@@ -138,7 +143,7 @@ TestUtils.runTests(
   __MODULE__,
   () => {
     TestUtils.test("should calculate int average", () =>
-      assert(floatAverage(3, 5) == 4)
+      assert(intAverage(3, 5) == 4)
     );
     TestUtils.test("should calculate float average", () =>
       assert(floatAverage(5., 10.) == 7.5)
