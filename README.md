@@ -1,5 +1,17 @@
 # Learn ReasonML Workshop
 
+## Quick Start
+
+1. Install [VS Code](https://code.visualstudio.com/download)
+1. Install the [reason-vscode](https://marketplace.visualstudio.com/items?itemName=jaredly.reason-vscode) plugin
+1. run in terminal:
+
+```
+git clone https://github.com/wix-private/learn-reasonml-workshop
+cd learn-reasonml-workshop/src/workshop-chapters
+npm install
+```
+
 ## What is reason? 
   Reason is not a new language; it’s a new syntax and toolchain powered by the battle-tested language, OCaml. Reason gives OCaml a familiar syntax geared toward JavaScript programmers, and caters to the existing NPM/Yarn workflow folks already know.
 
