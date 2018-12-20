@@ -62,6 +62,9 @@ assert([7, 6, 5, 4] == List.rev(nums));
    MAKE ME PASS
    Uncomment the following tests, fix the compilation errors, and make the tests pass 
    by adding the appropriate modules and functions
+
+   Note: as long as there are compilation errors, your `.bs.js` files won't update since
+   compilation fails.
  */
 
 TestUtils.runTests(__MODULE__, () =>
