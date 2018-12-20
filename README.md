@@ -1,10 +1,22 @@
 # Learn ReasonML Workshop
 
-- what is Reason? 
-  - js syntax for ocaml, compile to js
-- why?
+## What is reason? 
+  Reason is not a new language; it’s a new syntax and toolchain powered by the battle-tested language, OCaml. Reason gives OCaml a familiar syntax geared toward JavaScript programmers, and caters to the existing NPM/Yarn workflow folks already know.
 
-- ReasonMl ecosystem in a nutshell:
+  In that regard, Reason can almost be considered as a solidly statically typed, faster and simpler cousin of JavaScript, minus the historical crufts, plus the features of ES2030 you can use today, and with access to both the JS and the OCaml ecosystem!
+
+## Why reason?
+ - *A rock solid type system.* - OCaml types have 100% coverage every line of code!
+
+- *An eye for simplicity & pragmatism.* -  We allow opt-in side-effect, mutation and object for familiarity & interop, while keeping the rest of the language pure, immutable and functional.
+
+- *A focus on performance & size.* - Reason's build system, bsb, finishes building in less than 100ms (incremental).
+
+- *Incremental learning & codebase conversion.* - Reap the benefits of a fully typed file from day one. If everything else fails, paste some raw JavaScript snippets right in your Reason file.
+
+- *Great ecosystem & tooling.* - Use your favorite editor, your favorite NPM package, and any of your favorite existing stack. 
+
+## ReasonMl ecosystem in a nutshell:
 ![ecosystem diagram](images/reasonml-ecosystem.jpg)
 
 - disclaimer - small community, initial stages, docs sometimes missing, 
