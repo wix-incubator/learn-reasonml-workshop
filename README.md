@@ -7,8 +7,8 @@
 1. run the following commands in terminal:
 
 ```
-git clone https://github.com/wix-private/learn-reasonml-workshop
-cd learn-reasonml-workshop/src/workshop-chapters
+git clone git@github.com:wix-private/learn-reasonml-workshop.git
+cd learn-reasonml-workshop/workshop-chapters
 npm install
 ```
 
