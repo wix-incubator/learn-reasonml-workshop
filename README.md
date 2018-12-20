@@ -4,9 +4,8 @@
   - js syntax for ocaml, compile to js
 - why?
 
-- how? Ecosystem diagram = RE <-> Ocaml => BuckleScript...
-
-[ecosystem diagram](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Ecosystem diagram")
+- ReasonMl ecosystem in a nutshell:
+![ecosystem diagram](images/reasonml-ecosystem.jpg)
 
 - disclaimer - small community, initial stages, docs sometimes missing, 
 
