@@ -19,7 +19,7 @@ assert(true == Example.isVowel('a'));
 assert(false == Example.isVowel('b'));
 
 /* This includes the previous chapters as well: */
-/* assert(4 == Ch02_basic_syntax.intAverage(2, 6)) */
+/* assert(4 == Ch03_basic_syntax.intAverage(2, 6)) */
 
 /*
   You can also nest a module within a module using the `module` keyword:

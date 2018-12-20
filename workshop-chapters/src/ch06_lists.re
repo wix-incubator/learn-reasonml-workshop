@@ -22,25 +22,11 @@ let rec length = lst =>
 
 /*
  IMPLEMENT ME
- Write a function to add up the elements of a list by matching on it.
+ Write a function that sums all the elements in a list of integers
  */
 let rec sum = intList => {
   assert(false);
 };
-
-/*
-  The signature for the append operator is
-  let (@) : (list('a), list('a)) => list('a)
-
-  It's an infix operator.
- */
-let listAppend = (list1, list2) => list1 @ list2;
-
-/*
-  The way you put something on the head to the list uses the same kind of
-  syntax for matching on lists. This is called the spread syntax.
- */
-let newHead = (hd, rest) => [hd, ...rest];
 
 /*
  IMPLEMENT ME
@@ -55,6 +41,10 @@ let rec product = intList => {
  IMPLEMENT ME
  Write a function that receives a list of ints and returns the maximum int
  e.g. maxElement([2, 15, 8]) == 15
+
+ Hints:
+ - For an empty list, return `min_int`
+ - There's a built in function `max_int : (int, int) => int`
  */
 let rec maxElement = intList => {
   assert
@@ -84,6 +74,17 @@ let rec join = intList => {
 };
 
 /*
+  The signature for the append operator is
+  let (@) : (list('a), list('a)) => list('a)
+
+  It's an infix operator.
+ */
+let listAppend = (list1, list2) => list1 @ list2;
+assert([4, 5, 6, 7] == listAppend([4, 5], [6, 7]));
+assert([21, 22] == listAppend([], [21, 22]));
+assert([21, 22] == listAppend([21, 22], []));
+
+/*
  IMPLEMENT ME
  Write a function that receives a list, and returns a new list in reversed order.
  e.g. reverse([2, 3, 4, 5]) == [5, 4, 3, 2]
@@ -95,8 +96,11 @@ TestUtils.runTests(
   () => {
     let testInput = [3, 6, 4, 7, 1, 9, 5];
 
-    TestUtils.test("should calculate sum of the list", () =>
+    TestUtils.test("should calculate the sum of the list", () =>
       assert(sum(testInput) == 35)
+    );
+    TestUtils.test("should calculate the product of the list", () =>
+      assert(product(testInput) == 22680)
     );
     TestUtils.test("should get max element in a list", () =>
       assert(maxElement(testInput) == 9)
