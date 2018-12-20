@@ -11,33 +11,33 @@ let isSuperman = x =>
   };
 
 /*
-  IMPLEMENT ME
-  Let's use our own pattern matching. Write a function that returns
-  whether x is non zero by matching on x
+ IMPLEMENT ME
+ Let's use our own pattern matching. Write a function that returns `true` 
+ if the given string is a vowel (a, e, i, o, u) or false otherwise
  */
-let nonZero = x => assert(false);
+let isVowel = letter => assert(false);
 
 /*
- IMPLEMENT ME
- Write a function that returns `true` if the given char is a vowel (a, e, i, o, u)
- or false otherwise
+  IMPLEMENT ME
+  A cool thing about pattern matching is that you can match on number as well!
+  Write a function that returns whether x is non zero by matching on x
  */
-let isVowel = c => assert(false);
+let nonZero = x => assert(false);
 
 TestUtils.runTests(
   __MODULE__,
   () => {
+    TestUtils.test("should say it is a vowel", () =>
+      assert(isVowel("e") == true)
+    );
+    TestUtils.test("should say it is not a vowel", () =>
+      assert(isVowel("k") == false)
+    );
     TestUtils.test("should say it's not zero", () =>
       assert(nonZero(7) == true)
     );
     TestUtils.test("should say it is zero", () =>
       assert(nonZero(0) == false)
-    );
-    TestUtils.test("should say it is a vowel", () =>
-      assert(isVowel('e') == true)
-    );
-    TestUtils.test("should say it is not a vowel", () =>
-      assert(isVowel('k') == false)
     );
   },
 );
