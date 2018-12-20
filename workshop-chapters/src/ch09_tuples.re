@@ -45,10 +45,10 @@ let first = pair : pair => assert(false);
  */
 let second = pair : pair => assert(false);
 
-/* NOTE: you can destructure in the function parameters: */
-/* let add = ((x1, y1, z1), (x2, y2, z2)) => (x1 + x2, y1 + y2, z1 + z2); */
+/* NOTE: just like in javascript you can destructure in the function parameters: */
+/* let add2d = ((x1, y1), (x2, y2)) => (x1 + x2, y1 + y2); */
 
-/* NOTE: first and second are native: fst snd */
+/* NOTE: first and second come out of the box and are named: fst snd */
 /* NOTE: first and second are polymorphic */
 
 fst(("a", "b"));
