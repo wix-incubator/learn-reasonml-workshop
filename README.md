@@ -4,7 +4,7 @@
 
 1. Install [VS Code](https://code.visualstudio.com/download)
 1. Install the [reason-vscode](https://marketplace.visualstudio.com/items?itemName=jaredly.reason-vscode) plugin
-1. run in terminal:
+1. run the following commands in terminal:
 
 ```
 git clone https://github.com/wix-private/learn-reasonml-workshop
