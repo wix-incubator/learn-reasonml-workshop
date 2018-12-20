@@ -12,26 +12,17 @@
 
 # Table of Content
 
-1. [Prerequisites](#prerequisites)
-2. [Workshop overview](#overview)
-    - [Goals](#goals)
-    - [Process](#process)
-3. [The task](#task)
-    - [Flow](#flow)
-    - [Limitaions](#limit)
-4. [Tools](#tools)<br/><br/>
-5. [Workshop](#workshop)
-6. [Documentation](#docs)
-7. [Summary](#sum) <br/><br/>
-8. _[Additional information](#info)_
-    - _[Reminder on API Gateway](#apigw)_
-    - _[Differences from Scala workshop version](#scaladiff)_
-    - _[Lerna](#lerna)_
-    - _[Proto and code generation](#proto)_
-    - _[Why no yoshi](#yoshi)_
+1. [Prerequisites](#Prerequisites)
+1. [Workshop](#Workshop)
+    - Goals
+    - How to
+1. [Additional information](#additional-resources)
+    - More Coding
+    - Starting a project from scratch
+    - Links
+    - Credits
     
 
-<a name="prerequisites"></a>
 
 # Prerequisites
 
@@ -58,42 +49,35 @@ Just add the extension to VS Code and should work out of the box. We highly reco
 
 
 
+# Workshop
 
+## Goals
 
-
-<a name="overview"></a>
-
-# Workshop high level overview
-
-<a name="goals"></a>
-
-  ## Goals
   - General understanding of the ReasonML ecosystem
   - Experience hands on some of the super productive features 
   - Have fun!
 
-<a name="workshop"></a>
+## How to
 
-  ## Workshop
-  
-  chapters are ready to go
-  `npm start` for compilation with watch
-  `npm test` to run built in tests
-  everything you need is written in comments
+This repository includes a `workshop-chapters` folder which contains, well, all the chapters for the workshop. The chapters are self-contained, fully documented and have tests at the end. Simply start at `ch01` and work your way through.
+
+Since Reason is a compiled language, you need to compile your code before running tests. We recommend running `npm start` to have compilation run everytime your `.re` files change.
+
+For ease of use, test your code by running `npm test`.
 
   
-        
-<a name="info"></a>
+
 
 # Additional Resources
 
-
-
 ## More Coding!
-folder with AoC, Katas, etc.
+
+If you've finished the workshop and want some additional coding challenges, we gathered together a few things you can do. Just take a look in the `more-coding` folder.
 
         
 ## How to start a project from scratch
+
+If Reason really tickled your fancy and you want to start your own projects from scratch, here's a fast minimal way of doing it. Starting a new project has a few caviats and documentation changes often. Hopefully this section of the README will become redundant as the community fixes these issues.
 
 ### Short version:
 
@@ -122,11 +106,12 @@ The official installation process recommends install `bs-platform` globally, and
 
 ## Links
 
-* links to sites (buckle script, reasonml)
-* next steps (reason react, ocaml)
+There is a lot of basic material we did not cover in this workshop, and there's a lot to know. Probably everything you need to know is at one of the following sites:
+
+* [ReasonML website](https://reasonml.github.io/)
+* [BuckleScript website](https://bucklescript.github.io/)
 
 
 ## Credits 
 
-* OCaml workshop by Jane Street (add link)
-* learn-reasonml-workshop (https://github.com/protoship/learn-reasonml-workshop)
+This workshop is heavily based on [protoship/learn-reasonml-workshop](https://github.com/protoship/learn-reasonml-workshop) which is based on [a workshop organized by Jane Street](https://blog.janestreet.com/learn-ocaml-nyc/) for teaching OCaml.
