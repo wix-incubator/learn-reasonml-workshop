@@ -19,22 +19,24 @@ assert(11 == addFive(6));
 assert(36 == addFive(31));
 
 /*
- Now let's write a function named twice: it will take a function and apply
- that function to itself... well... twice.
+ IMPLEMENT ME
+ Now let's write a function named applyTwice: it will take a function and an argument and apply
+ that function to the argument twice.
  */
+let applyTwice = (f, x) => assert(false);
 
-/* IMPLEMENT ME */
-let twice = (f, x) => assert(false);
-
+/*
+ IMPLEMENT ME
+ Lets implment addTwo using applyTwice
+ */
 let addOne = x => x + 1;
-let square = x => x * x;
-
-/* Lets also implment addTwo and raiseToTheFourth using twice and addOne sqaure respectively */
-
-/* IMPLEMENT ME */
 let addTwo = assert(false);
 
-/* IMPLEMENT ME */
+/*
+ IMPLEMENT ME
+ Lets implment raiseToTheFourth using applyTwice
+ */
+let square = x => x * x;
 let raiseToTheFourth = assert(false);
 
 /*
@@ -43,6 +45,9 @@ let raiseToTheFourth = assert(false);
  The operator |> is called pipe operator or reverse application operator.
  It lets you chain function calls: x |> f is the same as f(x).
  That may not look like much, but it is quite useful when combining many function calls.
+
+ Remember that unlike long Lodash chains, all the types in the pipeline are guarunteed
+ to be correct.
  */
 let calc = x => {
   x  /* 3 */
@@ -81,7 +86,7 @@ TestUtils.runTests(
   __MODULE__,
   () => {
     TestUtils.test("should add one twice", () =>
-      assert(twice(addOne, 3) == 5)
+      assert(applyTwice(addOne, 3) == 5)
     );
     TestUtils.test("should add two", () =>
       assert(addTwo(1335) == 1337)

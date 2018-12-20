@@ -23,24 +23,27 @@ assert((3, 4, 5) == add3d((1, 1, 1), (2, 3, 4)));
 
 /*
  IMPLEMENT ME
- hint: sqrt
+ Write a function that generates a string from a point.
+ e.g.:
+ "(3., 4.)" == string_of_point((3., 4.))
  */
 type coord2d = (float, float);
-let norm = (point: coord2d) => assert(false);
+let string_of_point = (point: coord2d) => assert(false);
 
 /*
  IMPLEMENT ME
  Write a function to extract the first element from a pair.
  e.g.: first((3,4)) === 3
  */
-let first = pair => assert(false);
+type pair = ('a, 'a)
+let first = pair : pair => assert(false);
 
 /*
  IMPLEMENT ME
  Write functions to extract the first and second elements from a pair.
  e.g.: second((3,4)) == 4
  */
-let second = pair => assert(false);
+let second = pair : pair => assert(false);
 
 /* NOTE: you can destructure in the function parameters: */
 /* let add = ((x1, y1, z1), (x2, y2, z2)) => (x1 + x2, y1 + y2, z1 + z2); */
@@ -66,11 +69,11 @@ let has7 = tuple => {
 TestUtils.runTests(
   __MODULE__,
   () => {
-    TestUtils.test("should calculate normal", () =>
-      assert(5. == norm((3., 4.)))
+    TestUtils.test("should convert the point to a string", () =>
+      assert("(3., 4.)" == string_of_point((3., 4.)))
     );
-    TestUtils.test("should calculate normal", () =>
-      assert(13. == norm((5., 12.)))
+    TestUtils.test("should convert the point to a string", () =>
+      assert("(5., 12.)". == string_of_point((5., 12.)))
     );
     TestUtils.test("should get first from a tuple", () =>
       assert("foo" == first(("foo", "bar")))
