@@ -10,9 +10,12 @@
  ```
  $ npm run build
  ```
- and look in the `ch01_introduction.bs.js` file created
-
- The following line was compiled into `console.log("Hello, World!")
+ 
+ If finished successfully, all `.re` files in the project have been compiled and 
+ the output files are located next to them in the directory. 
+ 
+ Now look in the `ch01_introduction.bs.js` file created. The following line was 
+ compiled into `console.log("Hello, World!")
  */
 Js.log("Hello, World!!");
 
@@ -23,6 +26,9 @@ Js.log("Hello, World!!");
  ```
 
  This will watch your files and re-build when saving.
+
+ NOTE: turn on `autosave` in VS Code for this to work smoothly, or remember to
+ save in order to trigger a build
  */
 
 /*
