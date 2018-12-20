@@ -52,15 +52,12 @@ assert(false == Inner.even(7));
   are available in the `List` module
  */
 let nums = [4, 5, 6, 7];
-
 assert(4 == List.length(nums));
-assert(true == List.mem(5, nums));
-assert(false == List.mem(17, nums));
 assert([7, 6, 5, 4] == List.rev(nums));
 
 /*
    MAKE ME PASS
-   Uncomment the following tests, fix the compilation errors, and make the tests pass 
+   Uncomment the following tests, fix the compilation errors, and make the tests pass
    by adding the appropriate modules and functions
 
    Note: as long as there are compilation errors, your `.bs.js` files won't update since
