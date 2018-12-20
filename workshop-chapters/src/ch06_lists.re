@@ -21,9 +21,9 @@ let rec length = lst =>
   };
 
 /*
-IMPLEMENT ME 
-Write a function to add up the elements of a list by matching on it. 
-*/
+ IMPLEMENT ME
+ Write a function to add up the elements of a list by matching on it.
+ */
 let rec sum = intList => {
   assert(false);
 };
@@ -43,6 +43,7 @@ let listAppend = (list1, list2) => list1 @ list2;
 let newHead = (hd, rest) => [hd, ...rest];
 
 /*
+ IMPLEMENT ME
  Write a function that receives a list of ints and multiplies them
  e.g. product([2, 5, 7]) == 70
  */
@@ -51,6 +52,7 @@ let rec product = intList => {
 };
 
 /*
+ IMPLEMENT ME
  Write a function that receives a list of ints and returns the maximum int
  e.g. maxElement([2, 15, 8]) == 15
  */
@@ -61,6 +63,7 @@ let rec maxElement = intList => {
 };
 
 /*
+ IMPLEMENT ME
  Write a function that receives a list of ints and returns the minimum int
  e.g. minElement([2, 15, 8]) == 2
  */
@@ -69,6 +72,7 @@ let rec minElement = intList => {
 };
 
 /*
+ IMPLEMENT ME
  Write a function that receives a list of ints, converts them to strings and concatinates
  the strings together
  e.g. join([2, 15, 8]) == "2158"
@@ -80,6 +84,7 @@ let rec join = intList => {
 };
 
 /*
+ IMPLEMENT ME
  Write a function that receives a list, and returns a new list in reversed order.
  e.g. reverse([2, 3, 4, 5]) == [5, 4, 3, 2]
  */
