@@ -15,14 +15,14 @@ let isSuperman = x =>
  Let's use our own pattern matching. Write a function that returns `true` 
  if the given string is a vowel (a, e, i, o, u) or false otherwise
  */
-let isVowel = letter => assert(false);
+let isVowel = str => assert(false);
 
 /*
   IMPLEMENT ME
-  A cool thing about pattern matching is that you can match on number as well!
-  Write a function that returns whether x is non zero by matching on x
+  A cool thing about pattern matching is that you can match on numbers as well!
+  Write a function that returns whether `n` is non zero by matching on `n`
  */
-let nonZero = x => assert(false);
+let nonZero = n => assert(false);
 
 TestUtils.runTests(
   __MODULE__,
