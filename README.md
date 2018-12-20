@@ -19,7 +19,14 @@
 ## ReasonMl ecosystem in a nutshell:
 ![ecosystem diagram](images/reasonml-ecosystem.jpg)
 
-- disclaimer - small community, initial stages, docs sometimes missing, 
+
+## Disclaimer
+
+ReasonML is a new syntax for an old language - OCaml. Facebook reports [using it in production](https://reasonml.github.io/blog/2017/09/08/messenger-50-reason.html) for the Messanger app, and are trying to actively grow and support the ReasonML community. They even have an [annual conference](https://www.reason-conf.com/). 
+
+With all the hype, excitement and true value that OCaml language features provide, the ecosystem is still very young, documentation is sometimes partial, lacking or depricated, and there's a good chance you'll find yourself in need of libraries or tools that don't yet exist. Like all languages, ReasonML / OCaml has its fair share of baggage.
+
+That being said, we believe that learning a language from the ML family (ML, F# OCaml, ...) will make your a better developer, whether you'll use it in production or not. 
 
 
 # Table of Content
