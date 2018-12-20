@@ -6,6 +6,8 @@
 
 - how? Ecosystem diagram = RE <-> Ocaml => BuckleScript...
 
+[ecosystem diagram](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Ecosystem diagram")
+
 - disclaimer - small community, initial stages, docs sometimes missing, 
 
 
