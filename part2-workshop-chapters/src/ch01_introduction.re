@@ -3,11 +3,14 @@
  ===========
 
  In `.re` files we write code in Reason syntax which we then compile to javascript.
+ The javascript compiler is called BuckleScript, and the output files are commonly
+ suffixed with `bs`. e.g. `foobar.re` is compiled to `foobar.bs.js`
+
  Run the following command in a terminal
  ```
  $ npm run build
  ```
- and look in the `.bs.js` file created with the same file name
+ and look in the `ch01_introduction.bs.js` file created
 
  The following line was compiled into `console.log("Hello, World!")
  */
