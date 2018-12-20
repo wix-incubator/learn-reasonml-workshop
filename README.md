@@ -36,7 +36,7 @@ That being said, we believe that learning a language from the ML family (ML, F# 
     - [Goals](#Goals)
     - [How to](#How-to)
 1. [Additional information](#additional-resources)
-    - [More Coding](#More-Coding!)
+    - [More Coding](#More-Coding)
     - [Starting a project from scratch](#How-to-start-a-project-from-scratch)
     - [Links](#Links)
     - [Credits](#Credits)
