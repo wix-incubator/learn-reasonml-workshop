@@ -48,7 +48,7 @@ let firstName = "Shlomi";
 let lastName = "Toussia";
 let lastestName = "Cohen";
 
-let myHero = firstName ++ lastName ++ lastestName;
+let myHero = firstName ++ " " ++ lastName ++ " " ++ lastestName;
 
 assert("Shlomi Toussia Cohen" == myHero);
 
@@ -108,9 +108,9 @@ let verboseMult = (n, m) => {
    In a strongly typed language like Reason you need to define what a function gets and returns
    every time, but sometimes a function neither returns anything nor takes any input.
 
-   In case the function returns nothing (similiar to javascript returning `undefined` or C functions
-   returning `void`), in Reason the function will return `()` called unit. `()` is a singleton value
-   of type `unit`.
+   In case the function returns nothing (similiar to javascript returning `undefined` or 
+   C functions returning `void`), in Reason the function will return `()` called unit. 
+   `()` is a singleton value of type `unit`.
 
    hover your mouse over the following functions and look at their return type:
  */
@@ -119,15 +119,15 @@ Node.Process.exit;
 Dom.Storage.setItem;
 
 /*
-   In cases where the function needs no input, in Reason it must receive a value so we pass in `()`
-
-   hover your mouse over the following functions and look at their return type:
+   In cases where the function needs no input, in Reason it must receive a value so we 
+   pass in `()`. hover your mouse over the following functions and look at their input type:
  */
 Js.Date.now;
 Js.Math.random;
 
 /*
-   Please note that we invoke `Js.Math.random()` but this is just syntactic suger for `Js.Math.random(())`
+   Please note that we invoke `Js.Math.random()` but this is just 
+   syntactic suger for `Js.Math.random(())`
  */
 Js.log("I picked a random number: " ++ string_of_float(Js.Math.random()));
 

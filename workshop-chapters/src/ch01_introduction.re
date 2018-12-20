@@ -38,7 +38,7 @@ Js.log("Hello, World!!");
  Reason has a powerful formatting tool which was the inspiration for PrettierJS.
 
  The `reason-vscode` extension uses it out of the box when you format the file.
- Just press `Option + Shift + F` and see how the differnce.
+ Just press `Option + Shift + F` and see the differnce.
 
  Use it!
  */
