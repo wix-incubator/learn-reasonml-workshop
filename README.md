@@ -61,34 +61,38 @@ Just add the extension to VS Code and should work out of the box. We highly reco
 
 
 <a name="overview"></a>
+
 # Workshop high level overview
- 
 
+<a name="goals"></a>
 
- <a name="goals"></a>
-#### Goals
-  - have fun!
-
-<a name="process"></a>
-#### Process
- describe how chapters are to be solved
- 
-  
-
+  ## Goals
+  - General understanding of the ReasonML ecosystem
+  - Experience hands on some of the super productive features 
+  - Have fun!
 
 <a name="workshop"></a>
-# Let's start!  
- - learn the basics of the language: instructions in the files, no need to explain here
- - additional material: AoC, katas?
 
+  ## Workshop
+  
+  chapters are ready to go
+  `npm start` for compilation with watch
+  `npm test` to run built in tests
+  everything you need is written in comments
+
+  
         
 <a name="info"></a>
-# Additional information
-links to BS, Reason etc.
-credits to original workshops
-additional reading: 
+
+# Additional Resources
+
+
+
+## More Coding!
+folder with AoC, Katas, etc.
+
         
-## Starting from scratch
+## How to start a project from scratch
 
 ### Short version:
 
@@ -115,7 +119,7 @@ read [here](https://reasonml.github.io/blog/2017/08/25/way-nicer-error-messages.
 The official installation process recommends install `bs-platform` globally, and `bsb -init` creates a symlink to the global installation. In order to avoid weird setup conditions and version conflicts, this installation process makes sure to use the `bs-platform` which is locally installed in your project.
 
 
-## Resources?
+## Links
 
 * links to sites (buckle script, reasonml)
 * next steps (reason react, ocaml)
