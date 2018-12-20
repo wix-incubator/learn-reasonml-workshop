@@ -20,6 +20,8 @@ let rec addEveryNumberUpTo = x => {
  */
 let rec factorial = x => {
   assert(x >= 0);
+
+  /* PATTERN MATCH HERE! and delete the `assert(false)` */
   assert(false);
 };
 
@@ -30,10 +32,10 @@ TestUtils.runTests(
       assert(factorial(0) == 1)
     );
     TestUtils.test("should calculate factorial(5)", () =>
-      assert(factorial(5) == 1)
+      assert(factorial(3) == 6)
     );
     TestUtils.test("should calculate factorial(120)", () =>
-      assert(factorial(120) == 1)
+      assert(factorial(5) == 120)
     );
   },
 );
