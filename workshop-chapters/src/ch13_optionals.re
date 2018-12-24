@@ -35,7 +35,8 @@ let renderUserName = user => {
 };
 
 /*
- Implement the function [safeDivide(~dividend, ~divisor)], which takes two
+ IMPLEMENT ME
+ Write a function [safeDivide(~dividend, ~divisor)], which takes two
  ints and returns an int option. It should return None if [divisor = 0], and
  otherwise returns [Some(x)] where [x] is the division result
  */
