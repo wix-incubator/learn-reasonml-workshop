@@ -48,11 +48,11 @@ let safe_int_of_char = c => assert(false);
 TestUtils.runTests(
   __MODULE__,
   () => {
-    TestUtils.test("should safely calculate modulo", () =>
+    TestUtils.test("should safely calculate divide", () =>
       assert(Some(1) == safeDivide(~dividend=3, ~divisor=2))
     );
-    TestUtils.test("should safelycalculate modulo", () =>
-      assert(Some(0) == safeDivide(~dividend=3, ~divisor=0))
+    TestUtils.test("should return None when dividing by 0", () =>
+      assert(None == safeDivide(~dividend=3, ~divisor=0))
     );
     TestUtils.test("should safely get the char of a number", () =>
       assert(Some(5) == safe_int_of_char('5'))
