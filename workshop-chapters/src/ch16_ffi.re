@@ -28,16 +28,20 @@ assert(4. == sqrtFromJs(16.0))
 
 /* Lets take a look at another example: */
 [@bs.val]
-external consoleLog : string => unit = "console.log";
-consoleLog("heyo from js \(^_^)/ ");
+external logFromJs : string => unit = "console.log";
+logFromJs("heyo from js \\(^_^)/ ");
 
 /* 
   There exist many BuckleScript annotations to make it easy to write bindings. For example, you can use 
   the `[@bs.scope]` annotation instead of writing the namespace explicitly
  */
-[@bs.val] [@bs.scope "Math"] 
-external random : unit => float = "random";
-Js.log(string_of_float(random())); /* == random number */
+[@bs.val] [@bs.scope "Math"]
+external sqrtFromJs : float => float = "sqrt";
+assert(4. == sqrtFromJs(16.0))
+
+[@bs.val] [@bs.scope "console"] 
+external consoleLog : string => unit = "log";
+consoleLog("heyo from js \\(^_^)/ with @bs.scope ");
 
 /* There are a bunch of built-in bindings you are probably familiar with. For example: */
 Dom.Storage.getItem;
