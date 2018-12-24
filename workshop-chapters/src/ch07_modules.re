@@ -72,11 +72,11 @@ TestUtils.runTests(__MODULE__, () =>
        TestUtils.test("should return if even", () =>
          assert(false == Inner.odd(48))
        );
-       TestUtils.test("should return if digit", () =>
-         assert(true == Example.Chars.isDigit('3'))
+       TestUtils.test("should return true on a positive int", () =>
+         assert(true == Example.Ints.isPositive(17))
        );
-       TestUtils.test("should return if digit", () =>
-         assert(false == Example.Chars.isDigit('?'))
+       TestUtils.test("should return false on a negative int", () =>
+         assert(false == Example.Ints.isPositive(-9))
        ); */
   }
 );
