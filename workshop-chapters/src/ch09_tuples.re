@@ -73,7 +73,7 @@ TestUtils.runTests(
       assert("(3., 4.)" == string_of_point((3., 4.)))
     );
     TestUtils.test("should convert the point to a string", () =>
-      assert("(5., 12.)". == string_of_point((5., 12.)))
+      assert("(5., 12.)" == string_of_point((5., 12.)))
     );
     TestUtils.test("should get first from a tuple", () =>
       assert("foo" == first(("foo", "bar")))
