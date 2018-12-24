@@ -35,15 +35,15 @@ let string_of_point = (point: coord2d) => assert(false);
  Write a function to extract the first element from a pair.
  e.g.: first((3,4)) === 3
  */
-type pair = ('a, 'a)
-let first = pair : pair => assert(false);
+type pair('a) = ('a, 'a)
+let first = (pair : pair('a)) => assert(false);
 
 /*
  IMPLEMENT ME
  Write functions to extract the first and second elements from a pair.
  e.g.: second((3,4)) == 4
  */
-let second = pair : pair => assert(false);
+let second = (pair : pair('a)) => assert(false);
 
 /* NOTE: just like in javascript you can destructure in the function parameters: */
 /* let add2d = ((x1, y1), (x2, y2)) => (x1 + x2, y1 + y2); */
