@@ -40,7 +40,7 @@ let first = (pair : pair('a)) => assert(false);
 
 /*
  IMPLEMENT ME
- Write functions to extract the first and second elements from a pair.
+ Write functions to extract the second elements from a pair.
  e.g.: second((3,4)) == 4
  */
 let second = (pair : pair('a)) => assert(false);
