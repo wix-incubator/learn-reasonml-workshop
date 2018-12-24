@@ -48,7 +48,6 @@ let rec product = intList => {
  */
 let rec maxElement = intList => {
   assert(false);
-    /* For an empty list, you can use `min_int` */
 };
 
 /*
@@ -85,10 +84,11 @@ assert([21, 22] == listAppend([21, 22], []));
 
 /*
  IMPLEMENT ME
- Write a function that receives a list, and returns a new list in reversed order.
+ Write a function that receives a list of ints, and returns a new list in reversed order.
  e.g. reverse([2, 3, 4, 5]) == [5, 4, 3, 2]
  */
-let rec reverse = list => assert(false);
+type reverse = list(int) => list(int);
+let rec reverse: reverse = list => assert(false);
 
 TestUtils.runTests(
   __MODULE__,
