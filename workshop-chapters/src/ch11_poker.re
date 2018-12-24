@@ -23,7 +23,6 @@ type card = (rank, suit);
  Write a function that given two cards returns the high one.
  A card is considered "higher" is its rank is higher.
  e.g. Ace > King, Jack > Number(10), etc.
- If their rank is equal,
  */
 let highCard = (card1: card, card2: card) => failwith("implement me");
 
