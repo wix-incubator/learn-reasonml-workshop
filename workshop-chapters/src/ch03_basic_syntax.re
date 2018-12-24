@@ -31,11 +31,6 @@ let floatFourWithSignature: float = 4.;
 /* Uncomment the following line to see the compilation error */
 /* let seven: float = 7; */
 
-/* IMPLEMENT ME */
-let intAverage = (x, y) => assert(false);
-
-/* IMPLEMENT ME */
-let floatAverage = (x, y) => assert(false);
 
 /*
   String and Chars (https://reasonml.github.io/docs/en/string-and-char):
@@ -44,13 +39,13 @@ let floatAverage = (x, y) => assert(false);
   String concatenation is done with the ++ operator.
  */
 
-let firstName = "Shlomi";
-let lastName = "Toussia";
-let lastestName = "Cohen";
+let firstName = "Sponge";
+let lastName = "Bob";
 
-let myHero = firstName ++ " " ++ lastName ++ " " ++ lastestName;
+let myHero = firstName ++ " " ++ lastName;
 
-assert("Shlomi Toussia Cohen" == myHero);
+assert("Sponge Bob" == myHero);
+
 
 /*
  Booleans (https://reasonml.github.io/docs/en/boolean):
@@ -108,8 +103,8 @@ let verboseMult = (n, m) => {
    In a strongly typed language like Reason you need to define what a function gets and returns
    every time, but sometimes a function neither returns anything nor takes any input.
 
-   In case the function returns nothing (similiar to javascript returning `undefined` or 
-   C functions returning `void`), in Reason the function will return `()` called unit. 
+   In case the function returns nothing (similiar to javascript returning `undefined` or
+   C functions returning `void`), in Reason the function will return `()` called unit.
    `()` is a singleton value of type `unit`.
 
    hover your mouse over the following functions and look at their return type:
@@ -119,25 +114,42 @@ Node.Process.exit;
 Dom.Storage.setItem;
 
 /*
-   In cases where the function needs no input, in Reason it must receive a value so we 
+   In cases where the function needs no input, in Reason it must receive a value so we
    pass in `()`. hover your mouse over the following functions and look at their input type:
  */
 Js.Date.now;
 Js.Math.random;
 
 /*
-   Please note that we invoke `Js.Math.random()` but this is just 
+   Please note that we invoke `Js.Math.random()` but this is just
    syntactic suger for `Js.Math.random(())`
  */
 Js.log("I picked a random number: " ++ string_of_float(Js.Math.random()));
 
-/* Let's do a couple of exercises for shits and giggles */
+/*
+ IMPLEMENT ME
+ Write a function the returns the average of two ints
+ */
+let intAverage = (x, y) => assert(false);
 
-/* IMPLEMENT ME */
+/*
+ IMPLEMENT ME
+ Write a function the returns the average of two floats
+ */
+let floatAverage = (x, y) => assert(false);
+
+/*
+ IMPLEMENT ME
+ Write a function that returns the square of x
+ */
 let square = x => assert(false);
 
-/* IMPLEMENT ME */
-let half = x => assert(false);
+/*
+ IMPLEMENT ME
+ Write a function that receives a first, middle, last name and returns the full name
+ */
+let fullName = (firstName, middleName, lastName) => assert(false);
+
 
 TestUtils.runTests(
   __MODULE__,
@@ -151,11 +163,10 @@ TestUtils.runTests(
     TestUtils.test("should calculate square", () =>
       assert(square(6) == 36)
     );
-    TestUtils.test("should calculate half", () =>
-      assert(half(42) == 21)
-    );
-    TestUtils.test("should calculate something complext", () =>
-      string_of_int(half(square(4))) == "8"
+    TestUtils.test("should generate a full name", () =>
+      assert(
+        "Shlomi Toussia Cohen" === fullName("Shlomi", "Toussia", "Cohen"),
+      )
     );
   },
 );
