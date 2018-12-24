@@ -44,7 +44,7 @@ let rec product = intList => {
 
  Hints:
  - For an empty list, return `min_int`
- - There's a built in function `max : (int, int) => int`
+ - There's a built in function `max : ('a, 'a) => 'a`
  */
 let rec maxElement = intList => {
   assert(false);
