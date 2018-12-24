@@ -40,18 +40,16 @@ TestUtils.runTests(
     TestUtils.test("should find the high card 9 of Spades", () =>
       assert(
         (Number(9), Spade)
-        === highCard((Number(9), Spade), (Number(4), Diamond)),
+        == highCard((Number(9), Spade), (Number(4), Diamond)),
       )
     );
 
     TestUtils.test("should find the high card Jack of Clubs", () =>
-      assert(
-        (Jack, Club) === highCard((Jack, Club), (Number(10), Heart)),
-      )
+      assert((Jack, Club) == highCard((Jack, Club), (Number(10), Heart)))
     );
 
     TestUtils.test("should find the high card Ace of Diamods", () =>
-      assert((Ace, Heart) === highCard((Ace, Heart), (Ace, Diamond)))
+      assert((Ace, Heart) == highCard((Ace, Heart), (Ace, Diamond)))
     );
 
     TestUtils.test("should find a flush", () =>
