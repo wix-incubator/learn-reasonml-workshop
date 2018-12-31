@@ -1,6 +1,6 @@
 /*
   Remember lists? Let's enrich our list functions
-  This time we'll be using options(meaning using None and Some)
+  This time we'll be using optionals (meaning using None and Some)
 
   Here is an example for a `head` function
  */
@@ -30,7 +30,7 @@ let rec nth = (n, list) => assert(false);
  Write a function that receives a function ('a => bool) and a list of ('a)
  and returns the first element that returns true when applying the function to it
  e.g. :
- find(isEven, [3, 4, 5, 6, 7]) == Some(6)
+ find(isEven, [3, 4, 5, 6, 7]) == Some(4)
  find(x => x == "", ["a", "b", "c", "d", "e"]) == None
  */
 let rec find = (predicate, list) => assert(false);
