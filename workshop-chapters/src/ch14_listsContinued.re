@@ -1,5 +1,5 @@
 /*
-  Remember lists? Let's enreach our list functions
+  Remember lists? Let's enrich our list functions
   This time we'll be using options(meaning using None and Some)
 
   Here is an example for a `head` function
