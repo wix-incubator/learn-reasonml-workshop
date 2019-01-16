@@ -11,6 +11,9 @@ git clone git@github.com:wix-private/learn-reasonml-workshop.git
 cd learn-reasonml-workshop/workshop-chapters
 npm install
 ```
+Start the workshop by opening [ch01_introduction.re](https://github.com/wix-private/learn-reasonml-workshop/blob/master/workshop-chapters/src/ch01_introduction.re) in VS-Code. All the instructions are in comments in the files.
+
+The rest of this README is TL;DR
 
 ## What is reason? 
   Reason is not a new language; it’s a new syntax and toolchain powered by the battle-tested language, OCaml. Reason gives OCaml a familiar syntax geared toward JavaScript programmers, and caters to the existing NPM/Yarn workflow folks already know.
